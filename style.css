@@ -43,8 +43,31 @@ p {
 .section-m1 {
     margin: 40px 0;
 
- 
+}
 
+button.normal{
+    font-size: 14px;  /* co chu*/
+    font-weight: 600; /* do day, mong cua chu */
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px; /*thiet lap do cong cua cac goc */
+    cursor: pointer;  /*thiet lap con tro khi di chuyen vao */
+    border: none; /*duong vien */
+    outline: none; /* mot duong ke xung quanh phan tu, giup noi bat phan tu */
+    transition: 0.2s;  
+}
+
+button.white {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #130c0c;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solib #5c5a5a;
+    outline: none;
+    transition: 0.2s;
 }
 body {
     width: 100%;
@@ -67,7 +90,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
+    margin-right: auto;
 }
 
 #navbar li {
@@ -99,6 +122,15 @@ color: #088178;
     position: absolute;
     bottom: -4px;
     left: 20px;
+}
+
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
 }
 
 /* Giao diện home page */
@@ -268,4 +300,246 @@ color: #088178;
     color: red;
     font-size: 30px;
     padding: 10px 0;
+}
+
+#banner button:hover{  /* :hover khi di chuot den doi tuong se hien mau */
+    background: #088178;
+    color: #fff;
+}
+
+#sm-banner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#sm-banner .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    background-image: url("images/b17.jpg");
+    min-width: 49%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+#sm-banner .banner-box2 {
+    background-image: url("images/b10.jpg");
+}
+
+#sm-banner h4 {
+    color: #dce0db;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#sm-banner h2 {
+    color: #ebe6e6;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#sm-banner span {
+    color: #ebe5e5;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button {
+    background: #088178;
+    border: 1px solid #088178;
+}
+
+#banner3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+#banner3 .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    background-image: url("images/b4.jpg");
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+#banner3 .banner-box2{
+    background-image: url("images/b7.jpg");
+    
+}
+
+#banner3 .banner-box3{
+    background-image: url("images/b18.jpg");
+}
+
+
+#banner3 h2 {
+    color: #201f1f;
+    font-weight: 900;
+    font-size: 18px ;
+}
+
+#banner3 h3 {
+    color: #610a18;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url("images/b14.png");
+    background-repeat: no repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+}
+
+#newsletter h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+
+}
+#newsletter p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #777070;
+    margin-top: 10px;
+    
+}
+
+#newsletter p span {
+    color: yellow;
+}
+#newsletter .form {
+    display: flex;
+    width: 30%;
+}
+#newsletter input {
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+     border-top-right-radius: 0; /*chinh sua vien cho no bang voi sign up */
+     border-bottom-right-radius: 0;
+
+}
+#newsletter button {
+    background-color: #088178;
+    color: #fff;
+    white-space: nowrap; /* tao khoang trang */
+    border-top-left-radius: 0;
+     border-bottom-left-radius: 0;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo{
+    margin-bottom: 35px;
+}
+
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+footer .follow i {
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+footer .follow i:hover,
+footer a:hover {
+    color: #088178;
+}
+
+/* edit cho smatphone */
+@media (max-width:799px) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar .active {
+        right: 0px;
+    }
+    #navbar li {
+        margin-bottom: 25px;
+    }
+    #mobile {
+        display: flex ;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+    #lg-bag {
+        display: none;
+    }
 }
