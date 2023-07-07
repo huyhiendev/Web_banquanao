@@ -642,5 +642,5 @@ footer a:hover {
     cursor: pointer;
 }
 #prodetails .single-pro-details span {
-    line-height: 25px;
+    line-height: 25px; /* khoảng cách giữa các dòng chữ */
 }
