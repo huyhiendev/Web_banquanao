@@ -7,53 +7,46 @@
     <script src="http://kit.fontawesome.com/c4254e24a8.js " crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
+      
+      <div class="container">
         <div class="form-box">
-            <h1 id="title">Sign Up</h1>
+            <h1>Sign In</h1>
             <form action="">
-                <div class="input-group">
-                    <div id="nameField" class="input-field">
-                        <i class="fa-solid fa-user"></i>
-                        <input type=" text" placeholder="Username">
-                    </div>
-
-                    <div class="input-field">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="Email">
-                    </div>
-
-                    <div class="input-field">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Password">
-                    </div>
-                    <p>Loss password <a href="#">Click here!</a></p>
+              <div class="input-group" id="signincl">
+                  
+                <div class="input-field" id="emailsignin">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email">
                 </div>
-                <div class="btn-field">
-                    <button type="button" id="signupBtn">Sign Up</button>
-                    <button type="button" id="signinBtn" class="disable">Sign In</button>
+
+                <div class="input-field" id="passwordsignin">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password">
                 </div>
-            </form>
+                <p>Loss password <a href="#">Click here!</a></p>
+              <div class="bnn-field">
+                  <button type="button" id="signinBtn" tyle="justify-content: center;">Sign In</button>
+              </div>
+              
+          </form>
         </div>
+      </div>
     </div>
     <script>
-        let signunBtn = document.getElementById("signupBtn");
-        let signinBtn = document.getElementById("signinBtn");
-        let nameField = document.getElementById("nameField");
-        let title = document.getElementById("title");
+        
 
-        signinBtn.onclick = function() {
-            nameField.style.maxHeight = '0';
-            title.inertHTML = "Sign In";
-            signupBtn.classList.add("disable");
-            signinBtn.classList.remove("disable");
-        }
+        document.getElementById("signinBtn").onclick = function() {
+          var Email = document.getElementById("emailsignin").value;
+          var Password = document.getElementById("passwordsignin").value;
 
-        signupBtn.onclick = function() {
-            nameField.style.maxHeight = '60px';
-            title.inertHTML = "Sign Up";
-            signupBtn.classList.remove("disable");
-            signinBtn.classList.add("disable");
-        }
+          var loginSuccessful = true;
+          if (loginSuccessful) {
+            alert("Login successful!");
+            window.location.href = "index.html";
+          } else {
+            alert("Login failed. Please check your username and password.");
+          }
+        };
     </script>
 </body>
 </html>

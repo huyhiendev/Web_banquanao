@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script src="http://kit.fontawesome.com/c4254e24a8.js " crossorigin="anonymous"></script>
+</head>
+<body>
+      <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form action="">
+                <div class="input-group" id="signupcl">
+                    <div id="nameField" class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type=" text" placeholder="Username">
+                    </div>
+
+                    <div class="input-field" id="emailField">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+
+                    <div class="input-field"  id="passwordField">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    
+                </div>
+                <div class="btn-field" style="justify-content: space-between;">
+                    <button type="button" id="signupBtn">Sign Up</button>
+                    <button type="button" id="signinBtn" class="disable">Sign In</button>
+                </div>
+            </form>
+        </div>
+       
+    <script>
+        document.getElementById("signupBtn").onclick = function() {
+          var Username = document.getElementById("nameField").value;
+          var Email = document.getElementById("emailField").value;
+          var Password = document.getElementById("passwordField").value;
+
+          var registrationSuccessful = true;
+
+          if (registrationSuccessful) {
+            alert("Registration successful!");
+
+            window.location.href = "login.html";
+
+            document.getElementById("signupcl").style.display = "none";
+            document.getElementById("signincl").style.display = "block";
+          } else {
+            alert("Registration failed. Please try again.");
+          }
+        };
+    </script>
+</body>
+</html>

@@ -84,8 +84,10 @@ form p a {
 .btn-field {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+}
 
+.bnn-field{
+    padding-top: 30px;
 }
 .btn-field button {
     flex-basis: 48%;
@@ -99,7 +101,15 @@ form p a {
     transition: backgroud 1s;
 }
 
-.btn-field button.disable {
-    background: #eaeaea;
-    color: #555;
+.bnn-field button {
+    flex-basis: 48%;
+    background: #3c00a3;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: backgroud 1s;
+    width: 40%;
 }
