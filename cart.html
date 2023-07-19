@@ -48,8 +48,71 @@
                     <td>Tổng thanh toán</td>
                 </tr>
             </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="images/a1.png"></td>
+                    <td>Arsenal Home & Away</td>
+                    <td>99$</td>
+                    <td><input type="number" value="1"></td>
+                    <td>99$</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="images/a2.png"></td>
+                    <td>Liverpool Home & Away</td>
+                    <td>89$</td>
+                    <td><input type="number" value="1"></td>
+                    <td>89$</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="images/a3.png"></td>
+                    <td>Newcastle Home & Away</td>
+                    <td>55$</td>
+                    <td><input type="number" value="1"></td>
+                    <td>55$</td>
+                </tr>
+            </tbody>
+            
         </table>
+        
     </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Addly Voucher</h3>
+            <div>
+                <input type="text" placeholder="Nhập mã khuyến mãi của bạn">
+                <button class="normal">Addly</button>
+            </div>
+        </div>
+
+        <div id="subtotal">
+            <h3>Cart cartTotal</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>243$</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>243$</strong></td>
+                </tr>
+            </table>
+            <button class="normal">Proceed to checkout</button>
+         </div>
+
+    </section>
+
 
     <footer class="section-p1">
         <div class="col">
@@ -91,5 +154,54 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+        const addToCartButtons = document.querySelectorAll('.cart');
+        const cartItemsContainer = document.getElementById('cart-item');
+        const cartTotalSpan = document.getElementById('cartotal');
+
+        let cartTotal = 0;
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+            const product = button.getAttribute('data-product');
+            const price = parseFloat(button.getAttribute('data-price'));
+
+            const newRow = document.createElement('tr');
+
+            const removeCell = document.createElement('td');
+                const imageCell = document.createElement('td');
+                const productCell = document.createElement('td');
+                const priceCell = document.createElement('td');
+                const quantityCell = document.createElement('td');
+                const totalCell = document.createElement('td');
+
+                removeCell.innerHTML = '<button class="remove-from-cart-btn">X</button>';
+                imageCell.innerHTML = '<img src="placeholder.jpg" alt="Product Image">';
+                productCell.textContent = product;
+                priceCell.textContent = '$' + price.toFixed(2);
+                quantityCell.textContent = '1';
+                totalCell.textContent = '$' + price.toFixed(2);
+
+                newRow.appendChild(removeCell);
+                newRow.appendChild(imageCell);
+                newRow.appendChild(productCell);
+                newRow.appendChild(priceCell);
+                newRow.appendChild(quantityCell);
+                newRow.appendChild(totalCell);
+
+                cartItemsContainer.appendChild(newRow);
+
+                cartTotal += price;
+                cartTotalSpan.textContent = cartTotal.toFixed(2);
+
+                const removeButton = newRow.querySelector('.remove-from-cart-btn');
+                removeButton.addEventListener('click', () => {
+                    cartItemsContainer.removeChild(newRow);
+                    cartTotal -= price;
+                    cartTotalSpan.textContent = cartTotal.toFixed(2);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
